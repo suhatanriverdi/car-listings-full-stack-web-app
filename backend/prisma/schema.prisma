@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Car {
+  id                 Int       @id @default(autoincrement())
+  make               String
+  model              String
+  year               Int
+  price              Float
+  engineType         String
+  engineDisplacement String
+  power              Int
+  transmission       String
+  mileage            Int
+  imageUrl           String
+  interiorFeatures   String
+  safetyFeatures     String
+  serviceHistory     String
+  financingOptions   String
+  description        String
+  TradeIn            TradeIn[]
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  tradeIns  TradeIn[]
+}
+
+model TradeIn {
+  id               Int      @id @default(autoincrement())
+  fullName         String
+  phone            String
+  email            String
+  make             String
+  model            String
+  status           String   @default("PENDING")
+  year             Int
+  mileage          Int
+  imageUrls        String[]
+  transmission     String
+  fuelType         String
+  interiorFeatures String?
+  safetyFeatures   String?
+  serviceHistory   String?
+  userId           Int // Foreign key to User
+  user             User     @relation(fields: [userId], references: [id])
+  carId            Int // Foreign key to Car
+  car              Car      @relation(fields: [carId], references: [id])
+  createdAt        DateTime @default(now())
+}

@@ -15,12 +15,16 @@ You can see the **screenshots** from the desktop and mobile at the bottom.
 ## 🚀 Live Preview
 
 You can have a look at the live preview link:
-## [Live Preview Link](https://vite-react-kohl-six.vercel.app/)
+# [Live Preview Link](https://vite-react-kohl-six.vercel.app/)
 
 ### 🖥️ Figma Design
 
+ℹ️ This project was fully designed and developed by me — from the initial sketches on paper to every pixel and line of code:
+
+![Screenshot 2025-06-13 at 22 26 20 (1)](https://github.com/user-attachments/assets/7f53b886-1786-4b67-960f-7ed8b839e9bf)
+
 Check out the complete UI design in Figma:  
-[Figma UI Design](https://www.figma.com/design/Oa9b1I044hr1zVFbPMU3Sk/Car-Listing?node-id=0-1&t=MQ4d7wsJO94AJo9x-1)
+# [Figma UI Design](https://www.figma.com/design/Oa9b1I044hr1zVFbPMU3Sk/Car-Listing?node-id=0-1&t=MQ4d7wsJO94AJo9x-1)
 
 ## 🛠️ Features
 
